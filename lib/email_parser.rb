@@ -26,8 +26,6 @@ class EmailParser
 			end
         end
         @@parsed.uniq
-
     end
-
 end
 
