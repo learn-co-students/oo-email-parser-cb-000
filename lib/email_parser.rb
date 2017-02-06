@@ -12,7 +12,6 @@ class EmailParser
 
 	def parse
 		@emails = @emails.split(" ")
-		#search for commas at the end of emails && delete them
 		@emails[0] = @emails[0].delete("/,/")
 		if @emails.length > 2
 			@emails[2] = @emails[2].delete("/,/")
