@@ -5,14 +5,13 @@
 
 class EmailParser
 
-  attr_accessor :raw_list
+  attr_accessor :emails
 
-  def initialize raw_list
-    @raw_list = raw_list
-    self.parse
+  def initialize emails
+    @emails = emails
   end
 
   def parse
-    @raw_list.gsub(",","").split.uniq
+    @emails.gsub(",","").split.uniq
   end
 end
