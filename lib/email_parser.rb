@@ -5,4 +5,12 @@
 class EmailParser
   attr_accessor :email
 
+  def initialize(email_string)
+
+  end
+
+  def self.parse
+    email_array = email_list.split(/[\s,]/)
+    email_array
+  end
 end
