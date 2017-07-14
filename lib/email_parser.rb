@@ -4,20 +4,21 @@
 # or whitespace (' ').
 require 'set'
 class EmailParser
-
+    attr_reader :emails
     def initialize(csv)
-        @str = csv 
+        @emails = csv 
     end
     
     def parse
-        if @str.include?(', ') && @str.include?(' ')
-            @str =@str.split(/, | /)
-        elsif  @str.include?(', ')
-            @str = @str.split(', ')
-        else
-            @str = @str.split(' ')
-        end
-        @str = (Set.new(@str)).to_a
+        # if @emails.include?(', ') && @emails.include?(' ')
+        #     @emails = @emails.split(/, | /)
+        # elsif  @emails.include?(', ')
+        #     @emails = @emails.split(', ')
+        # else
+        #     @emails = @emails.split(' ')
+        # end
+       
+        (Set.new(emails.split(/, | /))).to_a
     end
 
 end
