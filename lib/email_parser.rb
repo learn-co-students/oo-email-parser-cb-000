@@ -18,7 +18,7 @@ class EmailParser
         #     @emails = @emails.split(' ')
         # end
        
-        (Set.new(emails.split(/, | /))).to_a
+        (Set.new(self.emails.split(/, | /))).to_a
     end
 
 end
