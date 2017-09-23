@@ -13,5 +13,6 @@ class EmailParser
     emails.split.map do |email|
       email.split(',')
     end.flatten.uniq
+    # you can call methods on  end keyword
   end
 end
