@@ -23,8 +23,22 @@ class EmailParser
     # Step 3
     # parses both CSV and space delimited emails
       # EmailParser.new(emails).parse #=> ["avi@test.com", "arel@test.com", "test@avi.com", "test@arel.com"]
-    emails.split(',').join.split()
+    # emails.split(',').join.split()
 
+    # Step 4
+    # parses and removes duplicate emails
+      # EmailParser.new("avi@test.com, avi@test.com" #=> ["avi@test.com"]
+    emails.split(',').join.split().uniq
 
   end
 end
+
+
+=begin
+  https://apidock.com/ruby/Array/uniq
+
+  #uniq Returns a new array by removing duplicate values in self
+
+  array = [ "a", "a", "b", "b", "c" ]
+  array.uniq   # => ["a", "b", "c"]
+=end
