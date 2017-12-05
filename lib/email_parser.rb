@@ -12,5 +12,7 @@ class EmailParser
   end
 
   def parse
+    # parses space delimited emails
+    @emails.split()
   end
 end
