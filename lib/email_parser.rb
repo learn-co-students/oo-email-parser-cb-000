@@ -12,7 +12,19 @@ class EmailParser
   end
 
   def parse
+    # Step 1
     # parses space delimited emails
-    @emails.split()
+      # EmailParser.new("avi@test.com arel@test.com").parse #=> ["avi@test.com", "arel@test.com"
+    # emails.split()
+
+    # Step 2
+    # parses CSV emails
+      # EmailParser.new("avi@test.com, arel@test.com").parse #=> ["avi@test.com", "arel@test.com"]
+    # Step 3
+    # parses both CSV and space delimited emails
+      # EmailParser.new(emails).parse #=> ["avi@test.com", "arel@test.com", "test@avi.com", "test@arel.com"]
+    emails.split(',').join.split()
+
+
   end
 end
