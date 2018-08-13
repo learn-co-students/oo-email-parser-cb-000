@@ -5,17 +5,16 @@
 require 'pry'
 class EmailParser
   
-  @@all = []
   
   def initialize(emails)
-    @@all.clear
+    @all = []
     emails_arr = emails.split(/[ ,]/)
-    emails_arr.each {|email| @@all << email if email.include?('@')}
+    emails_arr.each {|email| @all.push(email) if email.include?('@')}
   end
   
   def parse
     result = []
-    @@all.each {|email| result << email if !result.include?(email)}
+    @all.each {|email| result << email if !result.include?(email)}
     result
   end
 
